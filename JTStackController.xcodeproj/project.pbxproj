@@ -14,6 +14,9 @@
 		BFF889671375A61C002818C8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BFF889661375A61C002818C8 /* main.m */; };
 		BFF8896A1375A61C002818C8 /* JTStackControllerAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BFF889691375A61C002818C8 /* JTStackControllerAppDelegate.m */; };
 		BFF8896D1375A61C002818C8 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = BFF8896B1375A61C002818C8 /* MainWindow.xib */; };
+		BFF889751375A65F002818C8 /* JTStackController.m in Sources */ = {isa = PBXBuildFile; fileRef = BFF889741375A65F002818C8 /* JTStackController.m */; };
+		BFF889781375A67E002818C8 /* DemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BFF889771375A67E002818C8 /* DemoViewController.m */; };
+		BFF8897A1375A78F002818C8 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = BFF889791375A78F002818C8 /* .gitignore */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,13 +24,18 @@
 		BFF889591375A61C002818C8 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		BFF8895B1375A61C002818C8 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		BFF8895D1375A61C002818C8 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		BFF889611375A61C002818C8 /* JTStackController-Info.plist */ = {isa = PBXFileReference; path = "JTStackController-Info.plist"; sourceTree = "<group>"; };
+		BFF889611375A61C002818C8 /* JTStackController-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "JTStackController-Info.plist"; sourceTree = "<group>"; };
 		BFF889631375A61C002818C8 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		BFF889651375A61C002818C8 /* JTStackController-Prefix.pch */ = {isa = PBXFileReference; path = "JTStackController-Prefix.pch"; sourceTree = "<group>"; };
+		BFF889651375A61C002818C8 /* JTStackController-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "JTStackController-Prefix.pch"; sourceTree = "<group>"; };
 		BFF889661375A61C002818C8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		BFF889681375A61C002818C8 /* JTStackControllerAppDelegate.h */ = {isa = PBXFileReference; path = JTStackControllerAppDelegate.h; sourceTree = "<group>"; };
+		BFF889681375A61C002818C8 /* JTStackControllerAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JTStackControllerAppDelegate.h; sourceTree = "<group>"; };
 		BFF889691375A61C002818C8 /* JTStackControllerAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JTStackControllerAppDelegate.m; sourceTree = "<group>"; };
 		BFF8896C1375A61C002818C8 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainWindow.xib; sourceTree = "<group>"; };
+		BFF889731375A65F002818C8 /* JTStackController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JTStackController.h; sourceTree = "<group>"; };
+		BFF889741375A65F002818C8 /* JTStackController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JTStackController.m; sourceTree = "<group>"; };
+		BFF889761375A67E002818C8 /* DemoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DemoViewController.h; sourceTree = "<group>"; };
+		BFF889771375A67E002818C8 /* DemoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DemoViewController.m; sourceTree = "<group>"; };
+		BFF889791375A78F002818C8 /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +84,10 @@
 			children = (
 				BFF889681375A61C002818C8 /* JTStackControllerAppDelegate.h */,
 				BFF889691375A61C002818C8 /* JTStackControllerAppDelegate.m */,
+				BFF889731375A65F002818C8 /* JTStackController.h */,
+				BFF889741375A65F002818C8 /* JTStackController.m */,
+				BFF889761375A67E002818C8 /* DemoViewController.h */,
+				BFF889771375A67E002818C8 /* DemoViewController.m */,
 				BFF8896B1375A61C002818C8 /* MainWindow.xib */,
 				BFF889601375A61C002818C8 /* Supporting Files */,
 			);
@@ -89,6 +101,7 @@
 				BFF889621375A61C002818C8 /* InfoPlist.strings */,
 				BFF889651375A61C002818C8 /* JTStackController-Prefix.pch */,
 				BFF889661375A61C002818C8 /* main.m */,
+				BFF889791375A78F002818C8 /* .gitignore */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -119,7 +132,7 @@
 		BFF8894C1375A61C002818C8 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				ORGANIZATIONNAME = "東京工科大学";
+				ORGANIZATIONNAME = "Jun Tanaka";
 			};
 			buildConfigurationList = BFF8894F1375A61C002818C8 /* Build configuration list for PBXProject "JTStackController" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -145,6 +158,7 @@
 			files = (
 				BFF889641375A61C002818C8 /* InfoPlist.strings in Resources */,
 				BFF8896D1375A61C002818C8 /* MainWindow.xib in Resources */,
+				BFF8897A1375A78F002818C8 /* .gitignore in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -157,6 +171,8 @@
 			files = (
 				BFF889671375A61C002818C8 /* main.m in Sources */,
 				BFF8896A1375A61C002818C8 /* JTStackControllerAppDelegate.m in Sources */,
+				BFF889751375A65F002818C8 /* JTStackController.m in Sources */,
+				BFF889781375A67E002818C8 /* DemoViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -186,6 +202,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -195,6 +212,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -203,6 +221,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_VERSION = com.apple.compilers.llvmgcc42;
@@ -210,6 +229,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
 			};
 			name = Release;
@@ -223,7 +243,9 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "JTStackController/JTStackController-Prefix.pch";
 				INFOPLIST_FILE = "JTStackController/JTStackController-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -236,7 +258,9 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "JTStackController/JTStackController-Prefix.pch";
 				INFOPLIST_FILE = "JTStackController/JTStackController-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				WRAPPER_EXTENSION = app;
 			};
@@ -261,6 +285,7 @@
 				BFF889721375A61C002818C8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
