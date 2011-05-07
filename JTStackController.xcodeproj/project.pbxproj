@@ -1,0 +1,268 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		BFF8895A1375A61C002818C8 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BFF889591375A61C002818C8 /* UIKit.framework */; };
+		BFF8895C1375A61C002818C8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BFF8895B1375A61C002818C8 /* Foundation.framework */; };
+		BFF8895E1375A61C002818C8 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BFF8895D1375A61C002818C8 /* CoreGraphics.framework */; };
+		BFF889641375A61C002818C8 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = BFF889621375A61C002818C8 /* InfoPlist.strings */; };
+		BFF889671375A61C002818C8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BFF889661375A61C002818C8 /* main.m */; };
+		BFF8896A1375A61C002818C8 /* JTStackControllerAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BFF889691375A61C002818C8 /* JTStackControllerAppDelegate.m */; };
+		BFF8896D1375A61C002818C8 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = BFF8896B1375A61C002818C8 /* MainWindow.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		BFF889551375A61C002818C8 /* JTStackController.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JTStackController.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BFF889591375A61C002818C8 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		BFF8895B1375A61C002818C8 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		BFF8895D1375A61C002818C8 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		BFF889611375A61C002818C8 /* JTStackController-Info.plist */ = {isa = PBXFileReference; path = "JTStackController-Info.plist"; sourceTree = "<group>"; };
+		BFF889631375A61C002818C8 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		BFF889651375A61C002818C8 /* JTStackController-Prefix.pch */ = {isa = PBXFileReference; path = "JTStackController-Prefix.pch"; sourceTree = "<group>"; };
+		BFF889661375A61C002818C8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		BFF889681375A61C002818C8 /* JTStackControllerAppDelegate.h */ = {isa = PBXFileReference; path = JTStackControllerAppDelegate.h; sourceTree = "<group>"; };
+		BFF889691375A61C002818C8 /* JTStackControllerAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JTStackControllerAppDelegate.m; sourceTree = "<group>"; };
+		BFF8896C1375A61C002818C8 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainWindow.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		BFF889521375A61C002818C8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BFF8895A1375A61C002818C8 /* UIKit.framework in Frameworks */,
+				BFF8895C1375A61C002818C8 /* Foundation.framework in Frameworks */,
+				BFF8895E1375A61C002818C8 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		BFF8894A1375A61C002818C8 = {
+			isa = PBXGroup;
+			children = (
+				BFF8895F1375A61C002818C8 /* JTStackController */,
+				BFF889581375A61C002818C8 /* Frameworks */,
+				BFF889561375A61C002818C8 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		BFF889561375A61C002818C8 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BFF889551375A61C002818C8 /* JTStackController.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BFF889581375A61C002818C8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BFF889591375A61C002818C8 /* UIKit.framework */,
+				BFF8895B1375A61C002818C8 /* Foundation.framework */,
+				BFF8895D1375A61C002818C8 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BFF8895F1375A61C002818C8 /* JTStackController */ = {
+			isa = PBXGroup;
+			children = (
+				BFF889681375A61C002818C8 /* JTStackControllerAppDelegate.h */,
+				BFF889691375A61C002818C8 /* JTStackControllerAppDelegate.m */,
+				BFF8896B1375A61C002818C8 /* MainWindow.xib */,
+				BFF889601375A61C002818C8 /* Supporting Files */,
+			);
+			path = JTStackController;
+			sourceTree = "<group>";
+		};
+		BFF889601375A61C002818C8 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				BFF889611375A61C002818C8 /* JTStackController-Info.plist */,
+				BFF889621375A61C002818C8 /* InfoPlist.strings */,
+				BFF889651375A61C002818C8 /* JTStackController-Prefix.pch */,
+				BFF889661375A61C002818C8 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		BFF889541375A61C002818C8 /* JTStackController */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BFF889701375A61C002818C8 /* Build configuration list for PBXNativeTarget "JTStackController" */;
+			buildPhases = (
+				BFF889511375A61C002818C8 /* Sources */,
+				BFF889521375A61C002818C8 /* Frameworks */,
+				BFF889531375A61C002818C8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = JTStackController;
+			productName = JTStackController;
+			productReference = BFF889551375A61C002818C8 /* JTStackController.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BFF8894C1375A61C002818C8 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				ORGANIZATIONNAME = "東京工科大学";
+			};
+			buildConfigurationList = BFF8894F1375A61C002818C8 /* Build configuration list for PBXProject "JTStackController" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = BFF8894A1375A61C002818C8;
+			productRefGroup = BFF889561375A61C002818C8 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				BFF889541375A61C002818C8 /* JTStackController */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		BFF889531375A61C002818C8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BFF889641375A61C002818C8 /* InfoPlist.strings in Resources */,
+				BFF8896D1375A61C002818C8 /* MainWindow.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		BFF889511375A61C002818C8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BFF889671375A61C002818C8 /* main.m in Sources */,
+				BFF8896A1375A61C002818C8 /* JTStackControllerAppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		BFF889621375A61C002818C8 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BFF889631375A61C002818C8 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		BFF8896B1375A61C002818C8 /* MainWindow.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BFF8896C1375A61C002818C8 /* en */,
+			);
+			name = MainWindow.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		BFF8896E1375A61C002818C8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = DEBUG;
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		BFF8896F1375A61C002818C8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+			};
+			name = Release;
+		};
+		BFF889711375A61C002818C8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "JTStackController/JTStackController-Prefix.pch";
+				INFOPLIST_FILE = "JTStackController/JTStackController-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		BFF889721375A61C002818C8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "JTStackController/JTStackController-Prefix.pch";
+				INFOPLIST_FILE = "JTStackController/JTStackController-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				VALIDATE_PRODUCT = YES;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		BFF8894F1375A61C002818C8 /* Build configuration list for PBXProject "JTStackController" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BFF8896E1375A61C002818C8 /* Debug */,
+				BFF8896F1375A61C002818C8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BFF889701375A61C002818C8 /* Build configuration list for PBXNativeTarget "JTStackController" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BFF889711375A61C002818C8 /* Debug */,
+				BFF889721375A61C002818C8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BFF8894C1375A61C002818C8 /* Project object */;
+}
