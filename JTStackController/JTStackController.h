@@ -12,7 +12,7 @@
 @protocol JTStackControllerDelegate;
 
 @interface JTStackController : UIViewController {
-    @package
+@package
     UIScrollView   *_containerView;
     NSMutableArray *_viewControllers;
     BOOL            _animationInProgress;

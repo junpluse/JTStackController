@@ -16,7 +16,6 @@
 		BFF8896D1375A61C002818C8 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = BFF8896B1375A61C002818C8 /* MainWindow.xib */; };
 		BFF889751375A65F002818C8 /* JTStackController.m in Sources */ = {isa = PBXBuildFile; fileRef = BFF889741375A65F002818C8 /* JTStackController.m */; };
 		BFF889781375A67E002818C8 /* DemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BFF889771375A67E002818C8 /* DemoViewController.m */; };
-		BFF8897A1375A78F002818C8 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = BFF889791375A78F002818C8 /* .gitignore */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -158,7 +157,6 @@
 			files = (
 				BFF889641375A61C002818C8 /* InfoPlist.strings in Resources */,
 				BFF8896D1375A61C002818C8 /* MainWindow.xib in Resources */,
-				BFF8897A1375A78F002818C8 /* .gitignore in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -17,7 +17,7 @@
 {
     self.view = [[[UIView alloc] initWithFrame:CGRectMake(0, 0, 100, 100)] autorelease];
     
-    self.label = [[[UILabel alloc] initWithFrame:CGRectMake(0, 0, 40, 40)] autorelease];
+    self.label = [[[UILabel alloc] initWithFrame:CGRectMake(0, 0, 60, 40)] autorelease];
     self.label.autoresizingMask = UIViewAutoresizingFlexibleTopMargin | UIViewAutoresizingFlexibleBottomMargin | UIViewAutoresizingFlexibleLeftMargin | UIViewAutoresizingFlexibleRightMargin;
     self.label.center = self.view.center;
     self.label.backgroundColor = [UIColor clearColor];

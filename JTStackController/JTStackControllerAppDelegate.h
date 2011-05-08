@@ -11,8 +11,7 @@
 
 @class JTStackController;
 
-@interface JTStackControllerAppDelegate : NSObject <UIApplicationDelegate> {
-}
+@interface JTStackControllerAppDelegate : NSObject <UIApplicationDelegate>
 
 @property (nonatomic, retain) IBOutlet UIWindow *window;
 @property (nonatomic, retain) IBOutlet JTStackController *stackController;

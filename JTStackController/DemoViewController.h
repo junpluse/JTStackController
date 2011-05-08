@@ -9,8 +9,7 @@
 #import <UIKit/UIKit.h>
 
 
-@interface DemoViewController : UIViewController {
-}
+@interface DemoViewController : UIViewController
 
 @property (nonatomic, retain) UILabel *label;
 

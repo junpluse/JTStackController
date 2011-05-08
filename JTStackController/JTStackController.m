@@ -7,12 +7,10 @@
 //
 
 #import "JTStackController.h"
-#import <QuartzCore/QuartzCore.h>
 
 
 #pragma mark -
-@interface JTStackControllerContainerView : UIScrollView {    
-}
+@interface JTStackControllerContainerView : UIScrollView
 
 @end
 
@@ -58,7 +56,8 @@
 - (id)initWithCoder:(NSCoder *)aDecoder
 {
     self = [super initWithCoder:aDecoder];
-    if (self) {
+    if (self)
+    {
         [self sharedInit];
     }
     return self;
@@ -70,7 +69,8 @@
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
+    if (self)
+    {
         [self sharedInit];
     }
     return self;
@@ -153,7 +153,8 @@
     _containerView.contentSize = contentSize;
     
     // update view sizes
-    for (UIViewController *viewController in _viewControllers) {
+    for (UIViewController *viewController in _viewControllers)
+    {
         viewController.view.frame = CGRectMake(0, _containerView.bounds.size.height * [_viewControllers indexOfObject:viewController], _containerView.bounds.size.width, _containerView.bounds.size.height);
     }
     
@@ -164,12 +165,14 @@
 
 - (void)showViewController:(UIViewController *)viewController
 {
-    if (viewController.view.superview) {
+    if (viewController.view.superview)
+    {
         return;
     }
     
     // call delegate #1
-    if (self.delegate && [self.delegate respondsToSelector:@selector(stackController:willShowViewController:animated:)]) {
+    if (self.delegate && [self.delegate respondsToSelector:@selector(stackController:willShowViewController:animated:)])
+    {
         [self.delegate stackController:self willShowViewController:viewController animated:_animationInProgress];
     }
     
@@ -179,19 +182,22 @@
     [viewController viewDidAppear:_animationInProgress];
     
     // call delegate #2
-    if (self.delegate && [self.delegate respondsToSelector:@selector(stackController:didShowViewController:animated:)]) {
+    if (self.delegate && [self.delegate respondsToSelector:@selector(stackController:didShowViewController:animated:)])
+    {
         [self.delegate stackController:self didShowViewController:viewController animated:_animationInProgress];
     }
 }
 
 - (void)dismissViewControlller:(UIViewController *)viewController
 {
-    if (!viewController.view.superview) {
+    if (!viewController.view.superview)
+    {
         return;
     }
     
     // call delegate #1
-    if (self.delegate && [self.delegate respondsToSelector:@selector(stackController:willDismissViewController:animated:)]) {
+    if (self.delegate && [self.delegate respondsToSelector:@selector(stackController:willDismissViewController:animated:)])
+    {
         [self.delegate stackController:self willDismissViewController:viewController animated:_animationInProgress];
     }
     
@@ -201,7 +207,8 @@
     [viewController viewDidDisappear:_animationInProgress];
     
     // call delegate #2
-    if (self.delegate && [self.delegate respondsToSelector:@selector(stackController:didDismissViewController:animated:)]) {
+    if (self.delegate && [self.delegate respondsToSelector:@selector(stackController:didDismissViewController:animated:)])
+    {
         [self.delegate stackController:self didDismissViewController:viewController animated:_animationInProgress];
     }
 }
@@ -222,8 +229,10 @@
 
 - (void)dropViewControllersBelowBounds
 {
-    for (UIViewController *viewController in [_viewControllers reverseObjectEnumerator]) {
-        if (CGRectGetMaxY(_containerView.bounds) <= CGRectGetMinY(viewController.view.frame)) {
+    for (UIViewController *viewController in [_viewControllers reverseObjectEnumerator])
+    {
+        if (CGRectGetMaxY(_containerView.bounds) <= CGRectGetMinY(viewController.view.frame))
+        {
             [self dropViewController:viewController];
         }
     }
@@ -235,7 +244,8 @@
 - (id)initWithRootViewController:(UIViewController *)rootViewController
 {
     self = [self initWithNibName:nil bundle:nil];
-    if (self) {
+    if (self)
+    {
         [_viewControllers addObject:rootViewController];
     }
     return self;
@@ -243,7 +253,8 @@
 
 - (void)pushViewController:(UIViewController *)viewController animated:(BOOL)animated
 {
-    if (!viewController) {
+    if (!viewController)
+    {
         return;
     }
     
@@ -258,7 +269,8 @@
     // add controller to array
     [_viewControllers addObject:viewController];
     
-    if (animated) {
+    if (animated)
+    {
         _animationInProgress = YES;
     }
     
@@ -268,14 +280,16 @@
 
 - (UIViewController *)popViewControllerAnimated:(BOOL)animated
 {
-    if ([_viewControllers count] <= 1) {
+    if ([_viewControllers count] <= 1)
+    {
         return nil;
     }
     
     // retain top view controller
     UIViewController *topViewController = [[self topViewController] retain];
     
-    if (animated) {
+    if (animated)
+    {
         _animationInProgress = YES;
     }
     
@@ -283,7 +297,8 @@
     UIViewController *previousViewController = [_viewControllers objectAtIndex:[_viewControllers count] - 2];
     [_containerView scrollRectToVisible:previousViewController.view.frame animated:animated];
     
-    if (!animated) {
+    if (!animated)
+    {
         [self dropViewControllersBelowBounds];
     }
     
@@ -292,12 +307,14 @@
 
 - (NSArray *)popToViewController:(UIViewController *)viewController animated:(BOOL)animated
 {
-    if (![_viewControllers containsObject:viewController]) {
+    if (![_viewControllers containsObject:viewController])
+    {
         return nil;
     }
     
     NSMutableArray *viewControllers = [NSMutableArray array];
-    while ([self topViewController] != viewController) {
+    while ([self topViewController] != viewController)
+    {
         [viewControllers addObject:[self popViewControllerAnimated:animated]];
     }
     return viewControllers;
@@ -318,7 +335,8 @@
     UIViewController *topViewController = [self topViewController];
     
     // if controller has modal view controller, return it
-    if ([topViewController modalViewController]) {
+    if ([topViewController modalViewController])
+    {
         return [topViewController modalViewController];
     }
     
@@ -340,7 +358,8 @@
     [self popToRootViewControllerAnimated:animated];
     [self dropViewController:[self topViewController]];
     
-    for (UIViewController *viewController in viewControllers) {
+    for (UIViewController *viewController in viewControllers)
+    {
         [self pushViewController:viewController animated:animated];
     }
 }
@@ -359,11 +378,11 @@
     UIEdgeInsets visibleInsets = UIEdgeInsetsMake(-_containerInsets.top, -_containerInsets.left, -_containerInsets.bottom, -_containerInsets.right);
     CGRect visibleRect = CGRectStandardize(UIEdgeInsetsInsetRect(scrollView.bounds, visibleInsets));
     
-    for (UIViewController *viewController in [_viewControllers reverseObjectEnumerator]) {
-        
+    for (UIViewController *viewController in [_viewControllers reverseObjectEnumerator])
+    {
         // if controller's view is in visible rect
-        if (CGRectIntersectsRect(visibleRect, viewController.view.frame)) {
-            
+        if (CGRectIntersectsRect(visibleRect, viewController.view.frame))
+        {
             // show view controller
             [self showViewController:viewController];
             
@@ -371,14 +390,17 @@
             viewController.view.userInteractionEnabled = CGRectContainsRect(scrollView.bounds, viewController.view.frame);
             
             // fading
-            if (viewController != [_viewControllers objectAtIndex:0] && scrollView.bounds.origin.y < viewController.view.frame.origin.y) {
+            if (viewController != [_viewControllers objectAtIndex:0] && scrollView.bounds.origin.y < viewController.view.frame.origin.y)
+            {
                 viewController.view.alpha = CGRectIntersection(scrollView.bounds, viewController.view.frame).size.height / viewController.view.frame.size.height;;
             }
-            else {
+            else
+            {
                 viewController.view.alpha = 1.0;
             }
         }
-        else {
+        else
+        {
             // dismiss view controller
             [self dismissViewControlller:viewController];
         }
@@ -387,7 +409,8 @@
 
 - (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate
 {
-    if (decelerate) {
+    if (decelerate)
+    {
         _animationInProgress = YES;
     }
 }
@@ -420,12 +443,14 @@
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context
 {
     // if container frame changed
-    if (object == _containerView && [keyPath isEqualToString:@"frame"]) {
+    if (object == _containerView && [keyPath isEqualToString:@"frame"])
+    {
         CGRect oldFrame = [[change objectForKey:NSKeyValueChangeOldKey] CGRectValue];
         CGRect newFrame = [[change objectForKey:NSKeyValueChangeNewKey] CGRectValue];
         
         // if new frame size is not equal to old frame size
-        if (!CGSizeEqualToSize(oldFrame.size, newFrame.size)) {
+        if (!CGSizeEqualToSize(oldFrame.size, newFrame.size))
+        {
             [self layoutViews];
         }
     }
