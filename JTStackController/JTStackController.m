@@ -108,6 +108,8 @@
 - (void)viewDidUnload
 {
     [super viewDidUnload];
+    
+    [_containerView removeObserver:self forKeyPath:nil];
     [_containerView release], _containerView = nil;
 }
 
@@ -128,12 +130,57 @@
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
-    return YES;
+    return [[self visibleViewController] shouldAutorotateToInterfaceOrientation:interfaceOrientation];
+}
+
+- (void)willRotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration
+{
+    for (UIViewController *viewControllers in _viewControllers)
+    {
+        [viewControllers willRotateToInterfaceOrientation:toInterfaceOrientation duration:duration];
+    }
+}
+
+- (void)didRotateFromInterfaceOrientation:(UIInterfaceOrientation)fromInterfaceOrientation
+{
+    for (UIViewController *viewControllers in _viewControllers)
+    {
+        [viewControllers didRotateFromInterfaceOrientation:fromInterfaceOrientation];
+    }
 }
 
 - (void)willAnimateRotationToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation duration:(NSTimeInterval)duration
 {
     [self layoutViews];
+    
+    for (UIViewController *viewControllers in _viewControllers)
+    {
+        [viewControllers willAnimateRotationToInterfaceOrientation:interfaceOrientation duration:duration];
+    }
+}
+
+- (void)willAnimateFirstHalfOfRotationToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration
+{
+    for (UIViewController *viewControllers in _viewControllers)
+    {
+        [viewControllers willAnimateFirstHalfOfRotationToInterfaceOrientation:toInterfaceOrientation duration:duration];
+    }
+}
+
+- (void)didAnimateFirstHalfOfRotationToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation
+{
+    for (UIViewController *viewControllers in _viewControllers)
+    {
+        [viewControllers didAnimateFirstHalfOfRotationToInterfaceOrientation:toInterfaceOrientation];
+    }
+}
+
+- (void)willAnimateSecondHalfOfRotationFromInterfaceOrientation:(UIInterfaceOrientation)fromInterfaceOrientation duration:(NSTimeInterval)duration
+{
+    for (UIViewController *viewControllers in _viewControllers)
+    {
+        [viewControllers willAnimateSecondHalfOfRotationFromInterfaceOrientation:fromInterfaceOrientation duration:duration];
+    }
 }
 
 
@@ -276,6 +323,11 @@
     
     // scroll to view
     [_containerView scrollRectToVisible:viewController.view.frame animated:animated];
+    
+    if ([_viewControllers count] == 1)
+    {
+        [self scrollViewDidScroll:_containerView];
+    }
 }
 
 - (UIViewController *)popViewControllerAnimated:(BOOL)animated
@@ -455,6 +507,5 @@
         }
     }
 }
-
 
 @end
