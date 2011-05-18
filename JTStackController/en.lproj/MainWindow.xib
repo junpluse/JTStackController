@@ -79,10 +79,11 @@
 					<bool key="IBUIMultipleTouchEnabled">YES</bool>
 					<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 				</object>
-				<object class="NSMutableArray" key="IBUIViewControllers">
+				<object class="NSArray" key="IBUIViewControllers">
 					<bool key="EncodedWithXMLCoder">YES</bool>
 					<object class="IBUIViewController" id="648750146">
 						<object class="IBUINavigationItem" key="IBUINavigationItem" id="730940707">
+							<reference key="IBUINavigationBar"/>
 							<string key="IBUITitle">JTStackController</string>
 							<object class="IBUIBarButtonItem" key="IBUILeftBarButtonItem" id="822584140">
 								<string key="IBUITitle">Pop</string>
@@ -154,11 +155,11 @@
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBCocoaTouchOutletConnection" key="connection">
-						<string key="label">rootViewController</string>
-						<reference key="source" ref="380026005"/>
+						<string key="label">navigationController</string>
+						<reference key="source" ref="664661524"/>
 						<reference key="destination" ref="633404975"/>
 					</object>
-					<int key="connectionID">22</int>
+					<int key="connectionID">23</int>
 				</object>
 			</object>
 			<object class="IBMutableOrderedSet" key="objectRecords">
@@ -229,13 +230,13 @@
 						<reference key="parent" ref="648750146"/>
 					</object>
 					<object class="IBObjectRecord">
-						<int key="objectID">14</int>
-						<reference key="object" ref="822584140"/>
+						<int key="objectID">15</int>
+						<reference key="object" ref="40469769"/>
 						<reference key="parent" ref="730940707"/>
 					</object>
 					<object class="IBObjectRecord">
-						<int key="objectID">15</int>
-						<reference key="object" ref="40469769"/>
+						<int key="objectID">14</int>
+						<reference key="object" ref="822584140"/>
 						<reference key="parent" ref="730940707"/>
 					</object>
 				</object>
@@ -291,7 +292,7 @@
 				<reference key="dict.values" ref="0"/>
 			</object>
 			<nil key="sourceID"/>
-			<int key="maxID">22</int>
+			<int key="maxID">23</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<object class="NSMutableArray" key="referencedPartialClassDescriptions">
@@ -354,11 +355,13 @@
 						<bool key="EncodedWithXMLCoder">YES</bool>
 						<object class="NSArray" key="dict.sortedKeys">
 							<bool key="EncodedWithXMLCoder">YES</bool>
+							<string>navigationController</string>
 							<string>stackController</string>
 							<string>window</string>
 						</object>
 						<object class="NSMutableArray" key="dict.values">
 							<bool key="EncodedWithXMLCoder">YES</bool>
+							<string>UINavigationController</string>
 							<string>JTStackController</string>
 							<string>UIWindow</string>
 						</object>
@@ -367,11 +370,16 @@
 						<bool key="EncodedWithXMLCoder">YES</bool>
 						<object class="NSArray" key="dict.sortedKeys">
 							<bool key="EncodedWithXMLCoder">YES</bool>
+							<string>navigationController</string>
 							<string>stackController</string>
 							<string>window</string>
 						</object>
 						<object class="NSMutableArray" key="dict.values">
 							<bool key="EncodedWithXMLCoder">YES</bool>
+							<object class="IBToOneOutletInfo">
+								<string key="name">navigationController</string>
+								<string key="candidateClassName">UINavigationController</string>
+							</object>
 							<object class="IBToOneOutletInfo">
 								<string key="name">stackController</string>
 								<string key="candidateClassName">JTStackController</string>

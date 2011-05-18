@@ -15,6 +15,7 @@
 @implementation JTStackControllerAppDelegate
 
 @synthesize window = _window;
+@synthesize navigationController = _navigationController;
 @synthesize stackController = _stackController;
 
 - (void)dealloc
@@ -54,6 +55,8 @@
     self.stackController.containerInsets = UIEdgeInsetsMake(80, 40, 80, 40);
     
     [self pushNewViewController:nil];
+    
+    self.window.rootViewController = self.navigationController;
     [self.window makeKeyAndVisible];
     return YES;
 }
